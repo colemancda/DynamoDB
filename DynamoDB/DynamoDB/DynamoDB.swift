@@ -15,5 +15,34 @@ public struct DynamoDB {
     
     public var settings = Settings()
     
+    public var client = HTTP.Client()
     
+    public init() { }
+}
+
+internal extension DynamoDB {
+    
+    func validateResponse(response: HTTP.Response) throws -> JSON.Value {
+        
+        // validate status code
+        guard response.statusCode == HTTP.StatusCode.OK.rawValue
+            else { throw Error.ErrorStatusCode(response.statusCode, response.JSONValue?.objectValue) }
+        
+        // get JSON
+        guard let json = response.JSONValue else { throw Error.InvalidResponse }
+        
+        return json
+    }
+}
+
+internal extension HTTP.Response {
+    
+    var JSONValue: JSON.Value? {
+        
+        guard let jsonString = String(UTF8Data: self.body),
+            let jsonResponse = JSON.Value(string: jsonString)
+            else { return nil }
+        
+        return jsonResponse
+    }
 }

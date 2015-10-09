@@ -24,7 +24,7 @@ public struct AttributeValueUpdate {
     /// Specifies how to perform the update. 
     /// Valid values are PUT (default), DELETE, and ADD. 
     /// The behavior depends on whether the specified primary key already exists in the table.
-    public var action = Action()
+    public var action: Action
     
     /// Represents the data for an attribute. You can set one, and only one, of the elements.
     ///
@@ -34,6 +34,12 @@ public struct AttributeValueUpdate {
     /// Each book has one title but can have many authors. 
     /// The multi-valued attribute is a set; duplicate values are not allowed.
     public var value: AttributeValue
+    
+    public init(action: Action = Action(), value: AttributeValue) {
+        
+        self.action = action
+        self.value = value
+    }
 }
 
 // MARK: - Supporting Types
@@ -45,6 +51,7 @@ public extension AttributeValueUpdate {
         
         case ADD, PUT, DELETE
         
+        /// Initializes with the default value, which is ```PUT```.
         public init() { self = .PUT }
     }
 }

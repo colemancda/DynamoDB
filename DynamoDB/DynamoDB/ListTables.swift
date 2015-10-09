@@ -21,11 +21,11 @@ public extension DynamoDB {
     /// - Parameter limit: The first table name that this operation will evaluate. 
     /// Use the value that was returned for ```LastEvaluatedTableName``` in a previous operation, 
     /// so that you can obtain the next page of results.
-    func listTables(exclusiveStartTableName startTableName: String? = nil, limit: Int? = nil) throws -> (lastEvaluatedTableName: String, tableNames: [String]) {
+    func listTables(exclusiveStartTableName startTableName: String? = nil, limit: Int? = nil) throws -> (lastEvaluatedTableName: String?, tableNames: [String]) {
         
         // build request... 
         
-        var request = HTTP.Request(URL: settings.endpoint)
+        var request = HTTP.Request(URL: self.URL)
         
         do {
             

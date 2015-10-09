@@ -19,6 +19,8 @@
 		1A3806D61BC76337003F8492 /* ListTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806D51BC76337003F8492 /* ListTables.swift */; settings = {ASSET_TAGS = (); }; };
 		1A3806D81BC765E9003F8492 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806D71BC765E9003F8492 /* Error.swift */; settings = {ASSET_TAGS = (); }; };
 		1A3806DC1BC77AAC003F8492 /* AWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806DB1BC77AAC003F8492 /* AWS.swift */; settings = {ASSET_TAGS = (); }; };
+		1A3806E01BC78370003F8492 /* AWSSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806DF1BC78370003F8492 /* AWSSignature.swift */; settings = {ASSET_TAGS = (); }; };
+		1A3806E31BC787D7003F8492 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806E21BC787D7003F8492 /* Crypto.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		1A3806D51BC76337003F8492 /* ListTables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTables.swift; sourceTree = "<group>"; };
 		1A3806D71BC765E9003F8492 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		1A3806DB1BC77AAC003F8492 /* AWS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWS.swift; sourceTree = "<group>"; };
+		1A3806DF1BC78370003F8492 /* AWSSignature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSSignature.swift; sourceTree = "<group>"; };
+		1A3806E21BC787D7003F8492 /* Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +96,7 @@
 				1A3806AC1BC73917003F8492 /* DynamoDB.h */,
 				1A3806C31BC73ADC003F8492 /* DynamoDB.swift */,
 				1A3806D71BC765E9003F8492 /* Error.swift */,
-				1A3806DB1BC77AAC003F8492 /* AWS.swift */,
+				1A3806E11BC783C2003F8492 /* AWS */,
 				1A3806CC1BC743C2003F8492 /* Data Types */,
 				1A3806CB1BC743AF003F8492 /* Actions */,
 				1A3806AE1BC73917003F8492 /* Info.plist */,
@@ -127,6 +131,16 @@
 				1A3806CF1BC74707003F8492 /* TableDescription.swift */,
 			);
 			name = "Data Types";
+			sourceTree = "<group>";
+		};
+		1A3806E11BC783C2003F8492 /* AWS */ = {
+			isa = PBXGroup;
+			children = (
+				1A3806DB1BC77AAC003F8492 /* AWS.swift */,
+				1A3806DF1BC78370003F8492 /* AWSSignature.swift */,
+				1A3806E21BC787D7003F8492 /* Crypto.swift */,
+			);
+			name = AWS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,7 +259,9 @@
 				1A3806DC1BC77AAC003F8492 /* AWS.swift in Sources */,
 				1A3806D61BC76337003F8492 /* ListTables.swift in Sources */,
 				1A3806D81BC765E9003F8492 /* Error.swift in Sources */,
+				1A3806E31BC787D7003F8492 /* Crypto.swift in Sources */,
 				1A3806C41BC73ADC003F8492 /* DynamoDB.swift in Sources */,
+				1A3806E01BC78370003F8492 /* AWSSignature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,11 +14,17 @@ import SwiftFoundation
 public struct DynamoDB {
     
     /// The URL of the AWS endpoint. 
-    public var url: String
+    ///
+    /// - SeeAlso: AWS
+    public var URL: String
     
+    /// The HTTP client that will make the requests.
     public var client = HTTP.Client()
     
-    public init() { }
+    public init(URL: String) {
+        
+        self.URL = URL
+    }
 }
 
 internal extension DynamoDB {

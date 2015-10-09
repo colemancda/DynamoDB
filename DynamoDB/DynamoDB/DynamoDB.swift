@@ -13,7 +13,8 @@ import SwiftFoundation
 /// - SeeAlso: [API Reference](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/Welcome.html)
 public struct DynamoDB {
     
-    public var settings = Settings()
+    /// The URL of the AWS endpoint. 
+    public var url: String
     
     public var client = HTTP.Client()
     

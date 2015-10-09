@@ -71,7 +71,7 @@ public extension DynamoDB {
         }
         else { lastEvaluatedTableName = nil }
         
-        let tableNames: [String] = {
+        let tableNames: [String] = try {
             
             guard let json = jsonObject[ResponseJSONKey.TableNames.rawValue],
                 let stringArray = json.rawValue as? [String]

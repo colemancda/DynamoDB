@@ -11,7 +11,6 @@
 		1A3806B41BC73917003F8492 /* DynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3806A91BC73917003F8492 /* DynamoDB.framework */; settings = {ASSET_TAGS = (); }; };
 		1A3806B91BC73917003F8492 /* DynamoDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806B81BC73917003F8492 /* DynamoDBTests.swift */; };
 		1A3806C41BC73ADC003F8492 /* DynamoDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806C31BC73ADC003F8492 /* DynamoDB.swift */; settings = {ASSET_TAGS = (); }; };
-		1A3806C61BC73CA9003F8492 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806C51BC73CA9003F8492 /* Settings.swift */; settings = {ASSET_TAGS = (); }; };
 		1A3806CA1BC742F7003F8492 /* CreateTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806C91BC742F7003F8492 /* CreateTable.swift */; settings = {ASSET_TAGS = (); }; };
 		1A3806CE1BC74458003F8492 /* AttributeDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806CD1BC74458003F8492 /* AttributeDefinition.swift */; settings = {ASSET_TAGS = (); }; };
 		1A3806D01BC74707003F8492 /* TableDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806CF1BC74707003F8492 /* TableDescription.swift */; settings = {ASSET_TAGS = (); }; };
@@ -19,6 +18,7 @@
 		1A3806D41BC74DA7003F8492 /* AttributeValueUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806D31BC74DA7003F8492 /* AttributeValueUpdate.swift */; settings = {ASSET_TAGS = (); }; };
 		1A3806D61BC76337003F8492 /* ListTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806D51BC76337003F8492 /* ListTables.swift */; settings = {ASSET_TAGS = (); }; };
 		1A3806D81BC765E9003F8492 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806D71BC765E9003F8492 /* Error.swift */; settings = {ASSET_TAGS = (); }; };
+		1A3806DC1BC77AAC003F8492 /* AWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806DB1BC77AAC003F8492 /* AWS.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		1A3806B81BC73917003F8492 /* DynamoDBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamoDBTests.swift; sourceTree = "<group>"; };
 		1A3806BA1BC73917003F8492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A3806C31BC73ADC003F8492 /* DynamoDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamoDB.swift; sourceTree = "<group>"; };
-		1A3806C51BC73CA9003F8492 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		1A3806C91BC742F7003F8492 /* CreateTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTable.swift; sourceTree = "<group>"; };
 		1A3806CD1BC74458003F8492 /* AttributeDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeDefinition.swift; sourceTree = "<group>"; };
 		1A3806CF1BC74707003F8492 /* TableDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableDescription.swift; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		1A3806D31BC74DA7003F8492 /* AttributeValueUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeValueUpdate.swift; sourceTree = "<group>"; };
 		1A3806D51BC76337003F8492 /* ListTables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTables.swift; sourceTree = "<group>"; };
 		1A3806D71BC765E9003F8492 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		1A3806DB1BC77AAC003F8492 /* AWS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +91,8 @@
 			children = (
 				1A3806AC1BC73917003F8492 /* DynamoDB.h */,
 				1A3806C31BC73ADC003F8492 /* DynamoDB.swift */,
-				1A3806C51BC73CA9003F8492 /* Settings.swift */,
 				1A3806D71BC765E9003F8492 /* Error.swift */,
+				1A3806DB1BC77AAC003F8492 /* AWS.swift */,
 				1A3806CC1BC743C2003F8492 /* Data Types */,
 				1A3806CB1BC743AF003F8492 /* Actions */,
 				1A3806AE1BC73917003F8492 /* Info.plist */,
@@ -242,7 +242,7 @@
 				1A3806D21BC74B8C003F8492 /* AttributeValue.swift in Sources */,
 				1A3806D01BC74707003F8492 /* TableDescription.swift in Sources */,
 				1A3806CE1BC74458003F8492 /* AttributeDefinition.swift in Sources */,
-				1A3806C61BC73CA9003F8492 /* Settings.swift in Sources */,
+				1A3806DC1BC77AAC003F8492 /* AWS.swift in Sources */,
 				1A3806D61BC76337003F8492 /* ListTables.swift in Sources */,
 				1A3806D81BC765E9003F8492 /* Error.swift in Sources */,
 				1A3806C41BC73ADC003F8492 /* DynamoDB.swift in Sources */,

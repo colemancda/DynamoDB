@@ -14,6 +14,10 @@
 		1A3806C61BC73CA9003F8492 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806C51BC73CA9003F8492 /* Settings.swift */; settings = {ASSET_TAGS = (); }; };
 		1A3806C81BC740D1003F8492 /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806C71BC740D1003F8492 /* Table.swift */; settings = {ASSET_TAGS = (); }; };
 		1A3806CA1BC742F7003F8492 /* CreateTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806C91BC742F7003F8492 /* CreateTable.swift */; settings = {ASSET_TAGS = (); }; };
+		1A3806CE1BC74458003F8492 /* AttributeDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806CD1BC74458003F8492 /* AttributeDefinition.swift */; settings = {ASSET_TAGS = (); }; };
+		1A3806D01BC74707003F8492 /* TableDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806CF1BC74707003F8492 /* TableDescription.swift */; settings = {ASSET_TAGS = (); }; };
+		1A3806D21BC74B8C003F8492 /* AttributeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806D11BC74B8C003F8492 /* AttributeValue.swift */; settings = {ASSET_TAGS = (); }; };
+		1A3806D41BC74DA7003F8492 /* AttributeValueUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3806D31BC74DA7003F8492 /* AttributeValueUpdate.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,10 @@
 		1A3806C51BC73CA9003F8492 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		1A3806C71BC740D1003F8492 /* Table.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
 		1A3806C91BC742F7003F8492 /* CreateTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTable.swift; sourceTree = "<group>"; };
+		1A3806CD1BC74458003F8492 /* AttributeDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeDefinition.swift; sourceTree = "<group>"; };
+		1A3806CF1BC74707003F8492 /* TableDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableDescription.swift; sourceTree = "<group>"; };
+		1A3806D11BC74B8C003F8492 /* AttributeValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeValue.swift; sourceTree = "<group>"; };
+		1A3806D31BC74DA7003F8492 /* AttributeValueUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeValueUpdate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +91,8 @@
 				1A3806C31BC73ADC003F8492 /* DynamoDB.swift */,
 				1A3806C51BC73CA9003F8492 /* Settings.swift */,
 				1A3806C71BC740D1003F8492 /* Table.swift */,
-				1A3806C91BC742F7003F8492 /* CreateTable.swift */,
+				1A3806CC1BC743C2003F8492 /* Data Types */,
+				1A3806CB1BC743AF003F8492 /* Actions */,
 				1A3806AE1BC73917003F8492 /* Info.plist */,
 			);
 			path = DynamoDB;
@@ -96,6 +105,25 @@
 				1A3806BA1BC73917003F8492 /* Info.plist */,
 			);
 			path = DynamoDBTests;
+			sourceTree = "<group>";
+		};
+		1A3806CB1BC743AF003F8492 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				1A3806C91BC742F7003F8492 /* CreateTable.swift */,
+			);
+			name = Actions;
+			sourceTree = "<group>";
+		};
+		1A3806CC1BC743C2003F8492 /* Data Types */ = {
+			isa = PBXGroup;
+			children = (
+				1A3806CD1BC74458003F8492 /* AttributeDefinition.swift */,
+				1A3806D11BC74B8C003F8492 /* AttributeValue.swift */,
+				1A3806D31BC74DA7003F8492 /* AttributeValueUpdate.swift */,
+				1A3806CF1BC74707003F8492 /* TableDescription.swift */,
+			);
+			name = "Data Types";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,7 +235,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A3806CA1BC742F7003F8492 /* CreateTable.swift in Sources */,
+				1A3806D41BC74DA7003F8492 /* AttributeValueUpdate.swift in Sources */,
+				1A3806D21BC74B8C003F8492 /* AttributeValue.swift in Sources */,
+				1A3806D01BC74707003F8492 /* TableDescription.swift in Sources */,
 				1A3806C81BC740D1003F8492 /* Table.swift in Sources */,
+				1A3806CE1BC74458003F8492 /* AttributeDefinition.swift in Sources */,
 				1A3806C61BC73CA9003F8492 /* Settings.swift in Sources */,
 				1A3806C41BC73ADC003F8492 /* DynamoDB.swift in Sources */,
 			);
@@ -254,6 +286,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = $SRCROOT/../Carthage/Build/Mac;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -300,6 +333,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = $SRCROOT/../Carthage/Build/Mac;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;

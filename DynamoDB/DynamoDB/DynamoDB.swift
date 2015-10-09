@@ -6,10 +6,14 @@
 //  Copyright © 2015 ColemanCDA. All rights reserved.
 //
 
-//import SwiftFoundation
+import SwiftFoundation
 
 /// Type for interacting with [**Amazon DynamoDB**](https://aws.amazon.com/dynamodb/)
+///
+/// - SeeAlso: [API Reference](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/Welcome.html)
 public struct DynamoDB {
     
-    public var settings: Settings
+    public var settings = Settings()
+    
+    
 }
